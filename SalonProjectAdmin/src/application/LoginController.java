@@ -34,8 +34,7 @@ public class LoginController{
 	
 	public void loginButtonOnAction(ActionEvent e) throws IOException{
 		if(usrTextField.getText().isBlank() == false && passTextField.getText().isBlank() == false) {
-			validateLogin();
-			switchToDashboard(e);
+			validateLogin(e);
 		}else if(usrTextField.getText().isBlank() == false && passTextField.getText().isBlank() == true){
 			loginMessage.setText("Please enter password!");
 		}else if(usrTextField.getText().isBlank() == true && passTextField.getText().isBlank() == false){
@@ -45,7 +44,7 @@ public class LoginController{
 		}
 	}
 	
-	public void validateLogin() {
+	public void validateLogin(ActionEvent event) {
 		DatabaseConnection connectNow = new DatabaseConnection();
 		Connection connectDB = connectNow.getConnection();
 		
@@ -58,6 +57,7 @@ public class LoginController{
 			while(queryResult.next()) {
 				if(queryResult.getInt(1) == 1) {
 					loginMessage.setText("Success.");
+					switchToDashboard(event);
 				}else {
 					loginMessage.setText("Invalid login. Please try again.");
 				}
@@ -71,6 +71,7 @@ public class LoginController{
 		root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
+		stage.setResizable(false);
 		stage.setScene(scene);
 		stage.show();
 	}

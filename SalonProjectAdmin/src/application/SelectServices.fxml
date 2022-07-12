@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddAppointmentController">
+   <children>
+      <ListView fx:id="availableservicesListView" layoutX="14.0" layoutY="38.0" prefHeight="351.0" prefWidth="200.0" />
+      <ListView fx:id="selectedservicesListView" layoutX="338.0" layoutY="40.0" prefHeight="351.0" prefWidth="200.0" />
+      <Button fx:id="selectserviceBtn" layoutX="234.0" layoutY="147.0" mnemonicParsing="false" onAction="#selectServiceListen" text="Select">
+         <font>
+            <Font name="Calibri" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="saveserviceBtn" layoutX="241.0" layoutY="224.0" mnemonicParsing="false" onAction="#saveServices" text="Save">
+         <font>
+            <Font name="Calibri" size="23.0" />
+         </font>
+      </Button>
+      <Label layoutX="45.0" layoutY="12.0" text="Available Services">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="365.0" layoutY="12.0" text="Selected Services">
+         <font>
+            <Font name="Calibri" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="selectserviceBtn1" layoutX="226.0" layoutY="94.0" mnemonicParsing="false" onAction="#retrieveAvailableServices" text="Load Services">
+         <font>
+            <Font name="Calibri" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
