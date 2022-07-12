@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="767.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DashboardController">
+  <tabs>
+    <Tab text="Beautician Form">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="beauticianTable" layoutX="48.0" layoutY="35.0" prefHeight="283.0" prefWidth="675.0">
+                    <columns>
+                      <TableColumn fx:id="beauticianidCol" prefWidth="116.0" text="Beautician ID" />
+                      <TableColumn fx:id="beauticiannameCol" prefWidth="131.0" text="Beautician Name" />
+                        <TableColumn fx:id="beauticianemailCol" prefWidth="131.0" text="Beautician Email" />
+                        <TableColumn fx:id="beauticianphoneCol" prefWidth="131.0" text="Beautician Phone" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Button fx:id="loadbeauticianBtn" layoutX="68.0" layoutY="344.0" mnemonicParsing="false" onAction="#loadData_beautician" prefHeight="111.0" prefWidth="156.0" text="Load Data">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="addbeauticianBtn" layoutX="278.0" layoutY="343.0" mnemonicParsing="false" onAction="#addBeautician" prefHeight="113.0" prefWidth="216.0" text="Add Beautician">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="updatebeauticianBtn" layoutX="564.0" layoutY="344.0" mnemonicParsing="false" onAction="#updateBeautician" prefHeight="35.0" prefWidth="117.0" text="Update">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deletebeauticianBtn" layoutX="533.0" layoutY="411.0" mnemonicParsing="false" onAction="#deleteBeautician" prefHeight="35.0" prefWidth="117.0" text="Delete">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+                  <ChoiceBox fx:id="deletebeauticianCB" layoutX="665.0" layoutY="412.0" prefHeight="43.0" prefWidth="58.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Customer Form">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="customerTable" layoutX="48.0" layoutY="35.0" prefHeight="283.0" prefWidth="675.0">
+                     <columns>
+                        <TableColumn fx:id="customeridCol" prefWidth="116.0" text="ID" />
+                        <TableColumn fx:id="customernameCol" prefWidth="131.0" text="Name" />
+                        <TableColumn fx:id="customergenderCol" prefWidth="131.0" text="Gender" />
+                        <TableColumn fx:id="customeraddressCol" prefWidth="131.0" text="Address" />
+                        <TableColumn fx:id="customeremailCol" prefWidth="131.0" text="Email" />
+                        <TableColumn fx:id="customerphoneCol" prefWidth="131.0" text="Phone" />
+                        <TableColumn fx:id="customermemidCol" prefWidth="131.0" text="Member ID" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Button fx:id="loadcustomerBtn" layoutX="68.0" layoutY="356.0" mnemonicParsing="false" onAction="#loadData_customer" prefHeight="64.0" prefWidth="156.0" text="Load Data">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Services Form">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+      </Tab>
+      <Tab text="Appointment Form">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+      </Tab>
+      <Tab text="Totals Report">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+      </Tab>
+      <Tab text="Customer Report">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="732.0" />
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

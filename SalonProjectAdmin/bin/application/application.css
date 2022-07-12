@@ -1,0 +1,26 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.text-field {
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+.text-field:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}
+
+
+.login-button {
+	-fx-background-color:#F4DF4EFF;
+}
+
+.login-button:hover {
+	-fx-background-color:#F5F24E;
+}
+
+.login-button:active {
+	-fx-background-color:#F5C84E;
+}
+
+.root{
+	-fx-background-color: white;
+}
